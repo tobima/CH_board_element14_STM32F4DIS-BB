@@ -57,6 +57,11 @@
 #define STM32F4XX
 
 /*
+ * Change the PHY's power mode
+ */
+#define STM32_MAC_ETH1_CHANGE_PHY_STATE 1
+
+/*
  * IO pins assignments.
  */
 #define GPIOA_BUTTON                0
