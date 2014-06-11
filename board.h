@@ -21,6 +21,8 @@
  * Setup for STMicroelectronics STM32F4-Discovery board.
  */
 
+#define STM32F40_41xxx
+
 /*
  * Board identifier.
  */
