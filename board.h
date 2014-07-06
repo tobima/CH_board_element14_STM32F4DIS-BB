@@ -457,9 +457,9 @@
                                      PIN_AFIO_AF(GPIOB_SWO, 0) |            \
                                      PIN_AFIO_AF(GPIOB_PIN4, 0) |           \
                                      PIN_AFIO_AF(GPIOB_PIN5, 0) |           \
+                                     PIN_AFIO_AF(GPIOB_DMX_TX, 7) |           \
                                      PIN_AFIO_AF(GPIOB_PIN7, 0))
 #define VAL_GPIOB_AFRH              (PIN_AFIO_AF(GPIOB_PIN8, 0) |           \
-									 PIN_AFIO_AF(GPIOB_DMX_TX, 7) |           \
                                      PIN_AFIO_AF(GPIOB_SDA, 4) |            \
                                      PIN_AFIO_AF(GPIOB_CLK_IN, 0) |         \
                                      PIN_AFIO_AF(GPIOB_ETH_RMII_TX_EN, 11) |          \
