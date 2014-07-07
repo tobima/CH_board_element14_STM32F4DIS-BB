@@ -39,7 +39,7 @@
  * NOTE: LSE not fitted.
  */
 #if !defined(STM32_LSECLK)
-#define STM32_LSECLK                0
+#define STM32_LSECLK                32768
 #endif
 
 #if !defined(STM32_HSECLK)
@@ -395,7 +395,7 @@
                                      PIN_OTYPE_PUSHPULL(GPIOB_SWO) |        \
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN4) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN5) |       \
-                                     PIN_OTYPE_OPENDRAIN(GPIOB_DMX_TX) |       \
+                                     PIN_OTYPE_PUSHPULL(GPIOB_DMX_TX) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN7) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOB_PIN8) |       \
                                      PIN_OTYPE_OPENDRAIN(GPIOB_SDA) |       \
@@ -459,7 +459,7 @@
                                      PIN_AFIO_AF(GPIOB_SWO, 0) |            \
                                      PIN_AFIO_AF(GPIOB_PIN4, 0) |           \
                                      PIN_AFIO_AF(GPIOB_PIN5, 0) |           \
-                                     PIN_AFIO_AF(GPIOB_DMX_TX, 4) |            \
+                                     PIN_AFIO_AF(GPIOB_DMX_TX, 7) |           \
                                      PIN_AFIO_AF(GPIOB_PIN7, 0))
 #define VAL_GPIOB_AFRH              (PIN_AFIO_AF(GPIOB_PIN8, 0) |           \
                                      PIN_AFIO_AF(GPIOB_SDA, 4) |            \
@@ -613,7 +613,7 @@
                                      PIN_MODE_INPUT(GPIOD_PIN3) |           \
                                      PIN_MODE_OUTPUT(GPIOD_RESET) |         \
                                      PIN_MODE_INPUT(GPIOD_OVER_CURRENT) |   \
-                                     PIN_MODE_INPUT(GPIOD_DMX_BREAK) |           \
+                                     PIN_MODE_OUTPUT(GPIOD_DMX_BREAK) |           \
                                      PIN_MODE_INPUT(GPIOD_PIN7) |           \
                                      PIN_MODE_ALTERNATE(GPIOD_PIN8) |           \
                                      PIN_MODE_OUTPUT(GPIOD_PIN9) |           \
@@ -629,7 +629,6 @@
                                      PIN_OTYPE_PUSHPULL(GPIOD_PIN3) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOD_RESET) |      \
                                      PIN_OTYPE_PUSHPULL(GPIOD_OVER_CURRENT) |\
-                                     PIN_OTYPE_PUSHPULL(GPIOD_DMX_BREAK) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOD_PIN7) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOD_PIN8) |       \
                                      PIN_OTYPE_PUSHPULL(GPIOD_PIN9) |       \
@@ -645,7 +644,6 @@
                                      PIN_OSPEED_100M(GPIOD_PIN3) |          \
                                      PIN_OSPEED_100M(GPIOD_RESET) |         \
                                      PIN_OSPEED_100M(GPIOD_OVER_CURRENT) |  \
-                                     PIN_OSPEED_100M(GPIOD_DMX_BREAK) |          \
                                      PIN_OSPEED_100M(GPIOD_PIN7) |          \
                                      PIN_OSPEED_100M(GPIOD_PIN8) |          \
                                      PIN_OSPEED_50M(GPIOD_PIN9) |          \
@@ -661,7 +659,6 @@
                                      PIN_PUPDR_PULLUP(GPIOD_PIN3) |         \
                                      PIN_PUPDR_FLOATING(GPIOD_RESET) |      \
                                      PIN_PUPDR_FLOATING(GPIOD_OVER_CURRENT) |\
-                                     PIN_PUPDR_PULLUP(GPIOD_DMX_BREAK) |         \
                                      PIN_PUPDR_PULLUP(GPIOD_PIN7) |         \
                                      PIN_PUPDR_FLOATING(GPIOD_PIN8) |         \
                                      PIN_PUPDR_PULLDOWN(GPIOD_PIN9) |         \
@@ -693,7 +690,6 @@
                                      PIN_AFIO_AF(GPIOD_PIN3, 0) |           \
                                      PIN_AFIO_AF(GPIOD_RESET, 0) |          \
                                      PIN_AFIO_AF(GPIOD_OVER_CURRENT, 0) |   \
-                                     PIN_AFIO_AF(GPIOD_DMX_BREAK, 0) |           \
                                      PIN_AFIO_AF(GPIOD_PIN7, 0))
 #define VAL_GPIOD_AFRH              (PIN_AFIO_AF(GPIOD_PIN8, 7) |           \
                                      PIN_AFIO_AF(GPIOD_PIN9, 0) |           \
